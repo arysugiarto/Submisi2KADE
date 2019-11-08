@@ -3,7 +3,7 @@ package com.arysugiarto.Submisi2.footballmatchschedule
 import com.arysugiarto.Submisi2.footballmatchschedule.entity.List
 
 
-interface MatchContract {
+interface MatchView {
     interface View{
         fun hideLoading()
         fun showLoading()

@@ -1,12 +1,14 @@
 package com.arysugiarto.Submisi2.footballmatchschedule.ui.main
 
 
-interface MainContract {
+interface MainView {
 
     interface View{
+
     }
 
     interface Presenter{
+
 
     }
 

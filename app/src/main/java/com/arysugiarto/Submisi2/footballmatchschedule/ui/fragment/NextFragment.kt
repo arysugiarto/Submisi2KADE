@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.arysugiarto.Submisi2.footballmatchschedule.MatchContract
+import com.arysugiarto.Submisi2.footballmatchschedule.MatchView
 import com.arysugiarto.Submisi2.footballmatchschedule.R
 import com.arysugiarto.Submisi2.footballmatchschedule.adapter.MatchAdapater
 import com.arysugiarto.Submisi2.footballmatchschedule.api.ApiService
@@ -19,7 +19,7 @@ import com.arysugiarto.Submisi2.footballmatchschedule.extensions.show
 import kotlinx.android.synthetic.main.fragment_next.*
 
 
-class NextFragment : Fragment(), MatchContract.View {
+class NextFragment : Fragment(), MatchView.View {
 
     lateinit var presenter: NextPresenter
     private var ListMatch : MutableList<List<Any?>> = mutableListOf()

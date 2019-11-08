@@ -1,14 +1,14 @@
 
-import com.arysugiarto.Submisi2.footballmatchschedule.MatchContract
+import com.arysugiarto.Submisi2.footballmatchschedule.MatchView
 import com.arysugiarto.Submisi2.footballmatchschedule.entity.repository.Repository
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 
 class NextPresenter(
-    val mView: MatchContract.View,
+    val mView: MatchView.View,
     val matchRepositoryImpl: Repository
-) : MatchContract.Presenter {
+) : MatchView.Presenter {
 
     val compositeDisposable = CompositeDisposable()
 

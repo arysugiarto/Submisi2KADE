@@ -3,22 +3,23 @@ package com.arysugiarto.Submisi2.footballmatchschedule.ui.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import com.arysugiarto.Submisi2.footballmatchschedule.R
-import com.arysugiarto.Submisi2.footballmatchschedule.ui.fragment.LastFragment
+import com.arysugiarto.Submisi2.footballmatchschedule.ui.fragment.MainFragment
 import com.arysugiarto.Submisi2.footballmatchschedule.ui.fragment.NextFragment
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.bottom_nav_view.*
 
 
-class MainActivity : AppCompatActivity(), MainContract.View{
+class MainActivity : AppCompatActivity(), MainView.View {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         setSupportActionBar(toolbar_main)
 
-        bottom_navigation.setOnNavigationItemSelectedListener { item ->
+        bottom_navigation.setOnNavigationItemSelectedListener { item : MenuItem->
             when (item.itemId) {
                 R.id.lastMatch -> {
                     loadLastMatch(savedInstanceState)
@@ -37,7 +38,8 @@ class MainActivity : AppCompatActivity(), MainContract.View{
         if (savedInstanceState == null) {
             supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.main_container, LastFragment(), LastFragment::class.java.simpleName)
+                .replace(R.id.main_container,
+                    MainFragment(), MainFragment::class.java.simpleName)
                 .commit()
         }
     }
@@ -49,17 +51,5 @@ class MainActivity : AppCompatActivity(), MainContract.View{
                 .replace(R.id.main_container, NextFragment(), NextFragment::class.java.simpleName)
                 .commit()
         }
-
-
-        fun hideLoading() {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        }
-
-        fun showLoading() {
-            TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        }
-
     }
-
 }
-

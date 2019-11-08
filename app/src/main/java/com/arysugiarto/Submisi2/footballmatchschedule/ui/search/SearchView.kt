@@ -2,7 +2,7 @@ package com.arysugiarto.Submisi2.footballmatchschedule.ui.search
 
 import com.arysugiarto.Submisi2.footballmatchschedule.entity.List
 
-interface SearchMatchContract {
+interface SearchView {
 
     interface View{
         fun showLoading()
